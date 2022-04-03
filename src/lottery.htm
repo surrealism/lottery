@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>��Ʊ����</title>
+<title>彩票试算</title>
 <meta name="Generator" content="EditPlus">
 <meta name="Author" content="">
 <meta name="Keywords" content="">
@@ -11,18 +11,21 @@
 <body>
 <script language="JavaScript">
 <!--
-_MAX_ = 36;
-var num = new Array();
-for (i = 0; i < _MAX_; i ++) {
-  num[i] = i + 1;
-  document.write(num[i] + "&nbsp; ");
-}
-document.write("<br>\n");
-for (i = 0; i < _MAX_; i ++) {
-  c = Math.floor(Math.random() * 36);
-  temp = num[c];
-  document.write(temp + "&nbsp; ")
-}
+  _MAX_ = 36;
+  var num = new Array();
+  document.write("<br>原始数：<br>\n");
+  for (i = 0; i < _MAX_; i ++) {
+    num[i] = i + 1;
+    document.write(num[i] + "&nbsp; ");
+    if (i % 6 == 5) document.write("<br>\n");
+  }
+  document.write("<br>随机数：<br>\n");
+  for (i = 0; i < _MAX_; i ++) {
+    c = Math.floor(Math.random() * 36);
+    temp = num[c];
+    document.write(temp + "&nbsp; ");
+    if (i % 6 == 5) document.write("<br>\n");
+  }
 //-->
 </script>
 </body>
