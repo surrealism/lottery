@@ -6,17 +6,18 @@
 <meta name="Author" content="">
 <meta name="Keywords" content="">
 <meta name="Description" content="">
+<script language="JavaScript" src="lottery.js">
 </head>
 
 <body>
 <script language="JavaScript">
-<!--
-  _MAX_ = 36;
+
+  var _MAX_ = 36;
   var num = new Array();
   document.write("<br>原始数：<br>\n");
   for (i = 0; i < _MAX_; i ++) {
-    num[i] = i + 1;
-    document.write(num[i] + "&nbsp; ");
+    num.push(i + 1);
+    document.write((i + 1) + "&nbsp; ");
     if (i % 6 == 5) document.write("<br>\n");
   }
   document.write("<br>随机数：<br>\n");
@@ -26,7 +27,8 @@
     document.write(temp + "&nbsp; ");
     if (i % 6 == 5) document.write("<br>\n");
   }
-//-->
+  new Lottery().random_a();
+
 </script>
 </body>
 </html>
